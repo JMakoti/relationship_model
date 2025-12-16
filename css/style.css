@@ -161,7 +161,7 @@ header {
       var(--ivory) 0%,
       rgba(232, 221, 216, 0.7) 100%
     ),
-    url(/images/hero-bg.jpg) no-repeat center;
+    url('../images/hero-bg.jpg') no-repeat center;
   background-size: cover;
   padding: 8rem 1.5rem 6rem;
   text-align: center;
@@ -299,7 +299,7 @@ header {
       var(--ivory) 0%,
       rgba(232, 221, 216, 0.7) 100%
     ),
-    url(/images/vision-bg.png) no-repeat;
+    url('../images/vision-bg.png') no-repeat;
   background-size: cover;
 }
 .vision-lines {
@@ -393,7 +393,7 @@ header {
       var(--ivory) 0%,
       rgba(232, 221, 216, 0.7) 100%
     ),
-    url(/images/for-you-bg.png) no-repeat center;
+    url('../images/for-you-bg.png') no-repeat center;
   background-size: cover;
 }
 .for-you-container {
@@ -506,7 +506,7 @@ header {
       var(--ivory) 0%,
       rgba(232, 221, 216, 0.7) 100%
     ),
-    url(/images/your-coach-bg.jpeg) no-repeat center;
+    url('../images/your-coach-bg.jpeg') no-repeat center;
   background-size: cover;
 }
 .coach-container {
@@ -630,7 +630,7 @@ header {
       var(--ivory) 0%,
       rgba(232, 221, 216, 0.7) 100%
     ),
-    url(/images/testimonial-bg.jpg) no-repeat center;
+    url('../images/testimonial-bg.jpg') no-repeat center;
   background-size: cover;
 }
 .testimonials-container {
