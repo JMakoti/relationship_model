@@ -128,3 +128,7 @@
     grid-column: span 1;
   }
 }
+
+/* Ultra Small Devices (Very small phones) */
+@media (max-width: 375px) {
+}
