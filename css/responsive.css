@@ -1,31 +1,130 @@
+/* Responsive Design */
+/* Medium Devices (Tablets, 768px and up) */
+@media (max-width: 991px) {
+  /* Vision Section */
+  .vision-lines {
+    justify-content: center;
+    max-width: 400px;
+  }
 
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.5rem;
-        }
+  /* Coach Section */
+  .coach-container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .coach-image-container {
+    flex: 0 0 300px;
+  }
 
-        .section-title {
-          font-size: 2rem;
-        }
+  /* Include */
+  .included-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-        .coach-container {
-          flex-direction: column;
-          text-align: center;
-        }
+  .included-item:first-child {
+    grid-column: span 2;
+  }
+}
 
-        .coach-image-container {
-          flex: 0 0 auto;
-        }
+/* Small Devices (Phones, 576px and up) */
+@media (max-width: 767px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 
-        .coach-image {
-          width: 250px;
-          height: 250px;
-          font-size: 6rem;
-        }
+  .section-title {
+    font-size: 2rem;
+  }
 
-        .coach-ring {
-          width: 280px;
-          height: 280px;
-        }
-      }
+  /* Coach Section */
+  .coach-image-container {
+    flex: 0 0 auto;
+  }
+
+  .coach-image {
+    width: 250px;
+    height: 250px;
+    font-size: 6rem;
+  }
+
+  .coach-ring {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+/* Extra Small Devices (Phones, less than 576px) */
+@media (max-width: 575px) {
+  .nav-container .logo {
+    font-size: 1.3rem;
+  }
+
+  .nav-container span {
+    margin-left: 0rem;
+  }
+
+  .nav-container .btn {
+    display: none;
+  }
+  .nav-container .btn-join {
+    display: inline-block;
+    background-color: var(--rose-clay);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    cursor: pointer;
+    font-family: var(--body-font);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .btn-join:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.5s ease;
+    z-index: -1;
+  }
+
+  .btn-join:hover:before {
+    left: 100%;
+  }
+
+  .btn-join:hover {
+    background-color: #c07a63;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(208, 139, 116, 0.3);
+  }
+
+  /* About the Program  */
+  .about-program {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .about-section-title {
+    text-align: center;
+  }
+  /* Coach Section */
+  .coach-bg {
+    background-size: cover;
+  }
+  /* Include */
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .included-item:first-child {
+    grid-column: span 1;
+  }
+}

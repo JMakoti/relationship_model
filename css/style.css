@@ -82,6 +82,9 @@ h5 {
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 10px 25px rgba(208, 139, 116, 0.3);
 }
+.btn-join{
+  display: none;
+}
 
 section {
   padding: var(--section-padding);
@@ -513,7 +516,7 @@ header {
   display: flex;
   align-items: center;
   gap: 4rem;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .coach-content {
@@ -600,27 +603,6 @@ header {
   font-size: 1.5rem;
   color: var(--rose-clay);
   margin-top: 0.3rem;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .included-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .included-item:first-child {
-    grid-column: span 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .included-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .included-item:first-child {
-    grid-column: span 1;
-  }
 }
 
 /* Testimonials */
