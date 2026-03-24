@@ -445,19 +445,18 @@ header {
 } */
 
 .holding-back-section {
-  margin-bottom: 4rem;
-  border-bottom: 1px solid #f0e7da;
-  padding-bottom: 3rem;
-  margin: 0 auto;
+  padding: 0rem 4rem;
 }
 
-.holding-back-section h2 {
+.holding-back-section h2,
+.learn-content h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 }
-.holding-back-section h2:after {
+.holding-back-section h2:after,
+.learn-content h2:after {
   content: "";
   position: absolute;
   bottom: -8px;
@@ -475,15 +474,29 @@ header {
   margin: 2rem 0;
 }
 
-.holding-back-section .callout {
+.holding-back-section .callout,
+.learn-content .callout {
   font-size: 1.2rem;
   background: #e9e2d7;
-  /* border-radius: 1.5rem; */
   padding: 1rem 1.8rem;
   font-weight: 500;
 }
 
-  
+.learn {
+  /* margin-bottom: 4rem;
+  border-bottom: 1px solid #f0e7da;
+  padding-bottom: 3rem;
+  margin: 0 auto; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.learn-btn{
+   margin-top: 3rem;
+}
+
 /*For You Checklist */
 .for-you-bg {
   background:
