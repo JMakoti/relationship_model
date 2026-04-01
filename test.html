@@ -1,505 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>The Relationship Model | Build a Relationship of Uncommon Unity</title>
-    <!-- Google Fonts & simple CSS reset -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Relationship Model Course</title>
+<style>
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: #fdf6f0;
+  color: #333;
+}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #fefcf7;
-            color: #1e1e2a;
-            line-height: 1.5;
-            scroll-behavior: smooth;
-        }
+/* SECTION */
+.course-section {
+  padding: 80px 10%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
+/* SECTION HEADER */
+.course-section h1 {
+  font-size: 48px;
+  color: #4a1f0f;
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-        .section {
-            margin-bottom: 4rem;
-            border-bottom: 1px solid #f0e7da;
-            padding-bottom: 3rem;
-        }
+/* LESSONS */
+.lesson {
+  background: #fff7f0;
+  padding: 25px 30px;
+  border-left: 5px solid #cc5c32;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
 
-        .section:last-child {
-            border-bottom: none;
-        }
+.lesson h3 {
+  margin: 0 0 10px;
+  color: #4a1f0f;
+}
 
-        h1, h2, h3 {
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
+.lesson p {
+  margin: 5px 0;
+  line-height: 1.6;
+}
 
-        h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            background: linear-gradient(135deg, #2c3e2f, #a55b4c);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            margin-bottom: 1rem;
-        }
+/* QUOTE */
 
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            display: inline-block;
-        }
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #c17b5e;
-            border-radius: 2px;
-        }
+/* CALL TO ACTION */
+.cta {
+  text-align: center;
+  margin-top: 50px;
+}
 
-        .tagline {
-            font-size: 1.3rem;
-            color: #5c3e35;
-            font-weight: 500;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid #c17b5e;
-            padding-left: 1rem;
-        }
+.cta a {
+  display: inline-block;
+  background: #4a1f0f;
+  color: #fff;
+  padding: 15px 40px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
 
-        .grid-2 {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-        .grid-item {
-            flex: 1 1 280px;
-            background: #fffaf5;
-            padding: 1.5rem;
-            border-radius: 1.5rem;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.02), 0 2px 4px rgba(0,0,0,0.05);
-            border: 1px solid #f3eadf;
-        }
+.cta a:hover {
+  background: #cc5c32;
+}
 
-        .benefits-list {
-            list-style: none;
-        }
-        .benefits-list li {
-            margin-bottom: 0.75rem;
-            padding-left: 1.8rem;
-            position: relative;
-        }
-        .benefits-list li:before {
-            content: "✓";
-            color: #c17b5e;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .course-section h1 {
+    font-size: 36px;
+  }
 
-        .btn-primary {
-            display: inline-block;
-            background: #2c3e2f;
-            color: white;
-            font-weight: 700;
-            padding: 1rem 2.2rem;
-            border-radius: 60px;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-        .btn-primary:hover {
-            background: #1f2c21;
-            transform: translateY(-2px);
-            box-shadow: 0 12px 20px rgba(0,0,0,0.1);
-        }
-        .btn-outline {
-            background: transparent;
-            border: 2px solid #2c3e2f;
-            color: #2c3e2f;
-        }
-        .btn-outline:hover {
-            background: #2c3e2f;
-            color: white;
-        }
+  .course-section p.subtitle {
+    font-size: 18px;
+  }
 
-        .center {
-            text-align: center;
-        }
-        .quote {
-            font-style: italic;
-            background: #fff3ea;
-            padding: 1.8rem;
-            border-radius: 2rem;
-            margin: 2rem 0;
-            border-left: 8px solid #c17b5e;
-            font-size: 1.1rem;
-        }
-        .founder-story {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-            background: #faf4ed;
-            border-radius: 2rem;
-            padding: 2rem;
-        }
-        .story-text {
-            flex: 2;
-        }
-        .story-badge {
-            flex: 1;
-            background: white;
-            border-radius: 1.5rem;
-            padding: 1rem;
-            text-align: center;
-            font-weight: 600;
-        }
-        .funnel-highlight {
-            background: linear-gradient(120deg, #fef5e8, #fff);
-            border-radius: 2rem;
-            padding: 2rem;
-        }
-        .callout {
-            font-size: 1.2rem;
-            background: #e9e2d7;
-            border-radius: 1.5rem;
-            padding: 1rem 1.8rem;
-            font-weight: 500;
-        }
-        footer {
-            text-align: center;
-            padding: 2rem 0 1rem;
-            color: #6b5a4e;
-            border-top: 1px solid #e7ddd2;
-            margin-top: 2rem;
-        }
-        @media (max-width: 700px) {
-            h1 { font-size: 2.3rem; }
-            .container { padding: 1.5rem; }
-            .section { margin-bottom: 2.5rem; }
-        }
-        .form-group {
-            margin: 1.5rem 0;
-        }
-        input, select {
-            width: 100%;
-            padding: 0.9rem 1rem;
-            border-radius: 60px;
-            border: 1px solid #ddd2c4;
-            font-family: inherit;
-            background: white;
-        }
-        .success-msg {
-            background: #d4e2d0;
-            color: #1e4620;
-            padding: 1rem;
-            border-radius: 40px;
-            margin-top: 1rem;
-        }
-    </style>
+  .lesson h3 {
+    font-size: 20px;
+  }
+
+  .course-quote {
+    font-size: 18px;
+  }
+}
+</style>
 </head>
 <body>
-<div class="container">
-    <!-- Hero Section: Catchy headline + tagline + funnel intro -->
-    <div class="section">
-        <h1>The Relationship Model</h1>
-        <div class="tagline">From doubt to deep unity — become a power couple that thrives.</div>
-        <p style="font-size: 1.2rem; margin-bottom: 1rem;">Ever wondered how to have a relationship of true unity? Did you know there is knowledge and a framework that builds power couples?</p>
-        <div class="grid-2">
-            <div class="grid-item">
-                <p>🔹 <strong>Is your relationship in trouble</strong> and in need of some serious work?</p>
-                <p>🔹 <strong>About to begin a new relationship</strong> and petrified of it ending in ruins?</p>
-                <p>🔹 <strong>In a good space</strong> but you just know it could be great?</p>
-            </div>
-            <div class="grid-item">
-                <p>💡 <strong>The Relationship Model</strong> is a proven conceptual framework to help you frame and design your relationship for happiness, success and fulfillment.</p>
-                <ul class="benefits-list" style="margin-top: 1rem;">
-                    <li>Be genuinely happy in each other's company</li>
-                    <li>Talk without fighting</li>
-                    <li>Solve problems as a team</li>
-                    <li>Develop a deeper connection</li>
-                    <li>Be excited about growing old together</li>
-                </ul>
-            </div>
-        </div>
-        <div class="callout" style="margin: 1rem 0;">
-            🌟 Develop a relationship of uncommon unity. Become a power couple.
-        </div>
-        <div class="center" style="margin-top: 1.5rem;">
-            <a href="#signup" class="btn-primary">🚀 SIGN UP NOW — JOIN OUR NEXT GROUP</a>
-        </div>
-    </div>
 
-    <!-- Vision / Future possibilities -->
-    <div class="section">
-        <h2>Imagine a new chapter</h2>
-        <div class="grid-2">
-            <div class="grid-item">✨ You are looking to put yourself out there to build a successful relationship.</div>
-            <div class="grid-item">✨ You are in a fantastic relationship and looking to take it to the next level.</div>
-            <div class="grid-item">✨ You are in your second (or third) marriage, and you want to make this one work.</div>
-        </div>
-        <p style="font-size: 1.1rem;"><strong>The Relationship Model</strong> will answer these questions with practical learnings and application. This is the wake-up call you have been looking for.</p>
-    </div>
+<section class="course-section">
+  <h1>What You Will Learn on This Course</h1>
 
-    <!-- What could you do differently -->
-    <div class="section">
-        <h2>What could you do with this knowledge?</h2>
-        <p>By understanding and knowing how to apply The Relationship Model you will be able to:</p>
-        <div class="grid-2">
-            <div>
-                <ul class="benefits-list">
-                    <li>Identify areas of accountability, responsibility and maturity you have overlooked</li>
-                    <li>Truly understand the level of communication needed in a relationship</li>
-                    <li>Develop your own framework to understand your partner on a deeper level</li>
-                </ul>
-            </div>
-            <div>
-                <ul class="benefits-list">
-                    <li>Create your own special events and occasions that deepen relational bonds</li>
-                    <li>Appreciate the fun, excitement, and journey that a relationship offers</li>
-                </ul>
-            </div>
-        </div>
-        <div class="quote">
-            “The Relationship Model is not theoretical — together we will show you HOW to action what we discuss. Practical, thought-provoking activities and work to deeply consider who you are and what you need to do.”
-        </div>
-    </div>
+  <div class="lesson">
+    <h3>1. Attributes & Actions</h3>
+    <p>There are attributes and actions that you need to be aware of. These attributes can be learned. When learned, they allow you to bring your best self to the relationship.</p>
+    <p>You can’t change or save others, but you can start making changes yourself.</p>
+  </div>
 
-    <!-- Addressing fear / what holds people back -->
-    <div class="section">
-        <h2>What is really holding you back?</h2>
-        <p><strong>It's time to get real — this is your life we are talking about.</strong> Doing this work is hard. In some cases there is pain and betrayal. Sometimes it might be too easy to leave it rather than address it. No one ever taught us this “stuff”.</p>
-        <div class="grid-2">
-            <div>
-                <p>But you see it all around you:</p>
-                <ul style="margin-left: 1.5rem;">
-                    <li>Some people seem to get lucky in a relationship</li>
-                    <li>All the “good” guys and gals are taken</li>
-                    <li>Others just look so happy — they seem to have it all together</li>
-                </ul>
-            </div>
-            <div>
-                <p><strong>Relationships are supposed to be:</strong> beach holidays, great parties, beautiful clothing, smiles, cuddling, great photographs... but deep down you know it's deeper.</p>
-                <p class="callout" style="margin-top: 0.5rem;">Inside The Relationship Model there is a structured way to understand what is needed and achieve your ideal relationship. Don’t wait for the “right time”. Now is the time.</p>
-            </div>
-        </div>
-        <p>You just need a model and framework that works — and the courage to take the first steps. Work through this course on your own, or together with your significant other.</p>
-        <div class="center" style="margin-top: 1.5rem;">
-            <a href="#signup" class="btn-primary">I'M READY — START MY JOURNEY</a>
-        </div>
-    </div>
+  <div class="lesson">
+    <h3>2. Communication</h3>
+    <p>Communication is the second great key in The Relationship Model. Most couples think they are communicating. Learn what communication in a relationship should actually look like.</p>
+    <p>"The great enemy of communication, we find, is the illusion of it." – William H. Whyte</p>
+  </div>
 
-    <!-- What you will learn -->
-    <div class="section">
-        <h2>What you will learn inside</h2>
-        <div class="grid-2">
-            <div>
-                <ul class="benefits-list">
-                    <li>Attributes & actions you need to be aware of — they can be learnt</li>
-                    <li>Bring your best self to the relationship</li>
-                    <li>You can’t change others but you can start making changes yourself</li>
-                </ul>
-            </div>
-            <div>
-                <p><em>“The great enemy of communication, we find, is the illusion of it.”</em> — William H. Whyte</p>
-                <p>Learn what communication in a relationship should look like. Most couples THINK they are communicating.</p>
-            </div>
-        </div>
-        <ul class="benefits-list">
-            <li>You are the sum of all your past experiences — learn to deeply understand yourself and your partner</li>
-            <li>Set time aside to build and design what makes your relationship special</li>
-            <li>Relationships are hard work but also supposed to be fun — learn adaptability, adventure, and how to keep the spark</li>
-        </ul>
-        <div class="center" style="margin: 2rem 0 0;">
-            <a href="#signup" class="btn-primary">SIGN UP NOW → Unlock the curriculum</a>
-        </div>
-    </div>
+  <div class="lesson">
+    <h3>3. Understanding Yourself & Your Partner</h3>
+    <p>You are the sum of all your past experiences, so is your partner. Learn how to deeply understand yourself and your partner.</p>
+  </div>
 
-    <!-- Origin story: how product came to be -->
-    <div class="section">
-        <h2>The origin of The Relationship Model</h2>
-        <div class="founder-story">
-            <div class="story-text">
-                <p><strong>Back in 2005</strong> I was about to get married to Danielle, my girlfriend of 2 years, and I wanted to find a way to make sure my marriage lasted. I had not seen too many examples of Great Marriages. The Great Marriages I saw did not have a “playbook” on how to get there. I felt lost and nervous. I took my fear to my close mentor. Together we built and tested the model. Then I took it to Danielle — we discussed, made changes, and committed to running our marriage according to this framework.</p>
-                <p>Over the past 20 years we shared it with a few people, and the feedback was overwhelming: <strong>“You need to share this with more people.”</strong> This is why The Relationship Model exists today.</p>
-            </div>
-            <div class="story-badge">
-                💞 20+ years of proven foundation<br>👥 Trusted by couples & individuals
-            </div>
-        </div>
-    </div>
+  <div class="lesson">
+    <h3>4. Building Your Relationship</h3>
+    <p>Set time aside to build and design what makes your relationship special. Define what you want and how you will achieve it.</p>
+  </div>
 
-    <!-- Who is this for / not for -->
-    <div class="section">
-        <div class="grid-2">
-            <div>
-                <h2 style="margin-top: 0;">Perfect for you if...</h2>
-                <ul class="benefits-list">
-                    <li>You believe in investing in yourself</li>
-                    <li>You want to own your faults and move forward</li>
-                    <li>You’ve been hurt and won’t allow it to happen again</li>
-                    <li>You want to become a power couple</li>
-                    <li>You’re ready to have fun while growing</li>
-                </ul>
-            </div>
-            <div>
-                <h2 style="margin-top: 0;">This is NOT for you if...</h2>
-                <ul class="benefits-list">
-                    <li>You sweep things under the rug</li>
-                    <li>You always point fingers at others</li>
-                    <li>You play the victim card</li>
-                    <li>Narcissism or ego blocks you from learning</li>
-                    <li>You cannot face your own shadow</li>
-                </ul>
-            </div>
-        </div>
-        <div class="quote" style="background: #eae2d5;">
-            “This is for you. You owe this to yourself. Couples who work together — as well as individuals — have greatly benefited from The Relationship Model.”
-        </div>
-    </div>
+  <div class="lesson">
+    <h3>5. Fun & Adaptability</h3>
+    <p>Relationships are hard work but they are also supposed to be fun. Understand and learn the adaptability needed in a relationship. Learn how to find the fun, keep the fun, and maintain the adventure.</p>
+  </div>
+</section>
 
-    <!-- social proof placeholder + validation text -->
-    <div class="section">
-        <h2>Real stories (coming soon)</h2>
-        <p><em>We’ll add authentic testimonials after the first session — real voices, real transformation.</em> But know that hundreds of couples and individuals are already embracing this methodology. You are not alone. This movement grows every day.</p>
-        <div class="callout" style="background: #f3ede5;">✨ “The silent treatment is not what your relationship needs. Have deep conversations that stimulate your mind and deepen your connection.”</div>
-    </div>
-
-    <!-- How do you know this is for you? + first step -->
-    <div class="section">
-        <h2>How do you know this is for you?</h2>
-        <p>What has you considering this? <strong>This is the first step.</strong> Learn what other people rarely know. Learn how to take control of your relationship. Stop competing with your partner and start thriving.</p>
-        <div class="grid-2">
-            <div>
-                <ul class="benefits-list">
-                    <li>Learn how to share opinions that do not end in conflict</li>
-                    <li>Silent treatment? Not in your vocabulary</li>
-                    <li>Have deep conversations that ignite connection</li>
-                </ul>
-            </div>
-            <div>
-                <ul class="benefits-list">
-                    <li>Be a power couple!</li>
-                    <li>Understand the hidden dynamics that hold you back</li>
-                </ul>
-            </div>
-        </div>
-        <p class="center" style="font-weight: 600;">The Relationship Model will assist with all this, and more.</p>
-    </div>
-
-    <!-- Quick summary of process -->
-    <div class="section funnel-highlight">
-        <h2>Your journey starts in 3 steps</h2>
-        <div class="grid-2">
-            <div>📌 <strong>1. Enroll now</strong> — join our next online group</div>
-            <div>📅 <strong>2. Schedule</strong> — 6 live online sessions</div>
-            <div>📘 <strong>3. Transform</strong> — dive into content, assignments, and a new way of being</div>
-        </div>
-        <p style="margin-top: 1rem; font-size: 1.1rem;"><strong>This is not just a course — it's a different way of thinking and a different way of being.</strong> Let's get started.</p>
-    </div>
-
-    <!-- SIGNUP FORM (Google Form alternative + lead capture) -->
-    <div id="signup" class="section">
-        <h2>Secure your spot — join the next group</h2>
-        <p>Limited seats per cohort. Fill in the form below and we’ll send you all details (WhatsApp group, session schedule, and early access).</p>
-        <div style="max-width: 600px; margin: 2rem auto; background: #fffaf2; padding: 2rem; border-radius: 2rem; box-shadow: 0 8px 20px rgba(0,0,0,0.03);">
-            <form id="leadForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Your full name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Email address" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" placeholder="WhatsApp number (optional)" >
-                </div>
-                <div class="form-group">
-                    <select id="interest">
-                        <option value="individual">I'm joining as an individual</option>
-                        <option value="couple">I'm joining with my partner</option>
-                        <option value="exploring">Still exploring, send info</option>
-                    </select>
-                </div>
-                <div class="center">
-                    <button type="submit" class="btn-primary" style="width: 100%;">SIGN UP NOW → Secure my seat</button>
-                </div>
-                <p style="font-size: 0.8rem; margin-top: 1rem; text-align: center;">We respect your privacy. No spam, only relationship insights.</p>
-            </form>
-            <div id="formFeedback" style="margin-top: 1rem;"></div>
-        </div>
-        <div class="center">
-            <p><strong>Have questions?</strong> Reach us directly: <a href="mailto:hello@relationshipmodel.com" style="color:#a55b4c;">hello@relationshipmodel.com</a> or WhatsApp +1 (555) 123-4567 (placeholder)</p>
-            <p><em>Meet your coach: certified relationship architect & founder — 20 years of mentoring power couples.</em></p>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 The Relationship Model — Framework for uncommon unity. All rights reserved.</p>
-        <p style="margin-top: 0.5rem;">💬 “Stop hoping, start building.” — join the movement.</p>
-    </footer>
-</div>
-
-<script>
-    // simple sign-up handler with mock storage + success message (demo integration)
-    const form = document.getElementById('leadForm');
-    const feedbackDiv = document.getElementById('formFeedback');
-
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const phone = document.getElementById('phone').value.trim();
-        const interest = document.getElementById('interest').value;
-
-        if (!name || !email) {
-            feedbackDiv.innerHTML = '<div class="success-msg" style="background:#ffe0cc; color:#a03200;">❌ Please fill in name and email to continue.</div>';
-            return;
-        }
-
-        // simulate saving to local storage or Google Form hook (this is a demo)
-        const leadData = { name, email, phone, interest, timestamp: new Date().toISOString() };
-        console.log('Lead captured:', leadData);
-        // You could replace with actual Google Form Web App URL or store locally
-        // Show success message and optional redirect
-        feedbackDiv.innerHTML = `<div class="success-msg">✨ Thank you ${name}! You're on the list. We’ll email you with group dates and access to The Relationship Model orientation. Check your inbox (and spam) ✨</div>`;
-        form.reset();
-        // optional: trigger analytics or meta pixel
-        setTimeout(() => {
-            feedbackDiv.innerHTML = '';
-        }, 8000);
-    });
-
-    // subtle scroll effect for CTA buttons (smooth)
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const targetId = this.getAttribute('href');
-            if(targetId === '#') return;
-            const targetElem = document.querySelector(targetId);
-            if(targetElem) {
-                e.preventDefault();
-                targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-    
-    // optional: small interactive demo to show the relational approach
-    console.log("The Relationship Model — built for unity & power couples");
-</script>
 </body>
 </html>
