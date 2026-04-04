@@ -19,79 +19,84 @@
     <link rel="stylesheet" href="css/animate.css" />
   </head>
   <body>
-    <!-- Header -->
-    <!-- <header id="main-header">
-      <div class="nav-container">
-        <a href="#" class="logo"><span>Relationship</span> Model</a>
-        <a href="#cta" class="btn">Join the Program</a>
-        <a href="#cta" class="btn-join">Join</a>
-      </div>
-    </header> -->
+    <!-- Preload Spinner -->
+    <div id="spinner" class="spinner show">
+      <div class="spinner-grow"></div>
+    </div>
 
     <!-- Hero Section -->
-    <section class="hero" id="hero">
-      <div
-        class="floating-element"
-        style="width: 300px; height: 300px; top: 10%; left: 5%"
-      ></div>
-      <div
-        class="floating-element"
-        style="width: 200px; height: 200px; bottom: 20%; right: 10%"
-      ></div>
-
-      <div class="hero-content">
-        <!-- <p>Ever wondered how to have a relationship of true unity?</p>
-
-        <p>
-          Did you know there is knowledge and a framework that builds power
-          couples?
-        </p>
-
-        <p>Is your relationship in trouble and in need of some serious work?</p> -->
-
-        <!-- <h1>
-          Are you about to begin a new relationship and find yourself petrified
-          of it ending in ruins?
-        </h1>
-        <div class="hero-subtitle">
-          <p>
-            The Relationship Model is a proven conceptual model to help you
-            frame and design your relationship for happiness, success and
-            fulfillment. Be genuinely happy in each others company Talk without
-            fighting Solve problems as a team Develop a deeper connection Be
-            excited about growing old together Develop a relationship of
-            uncommon unity.<br />Become a power couple
-          </p>
-        </div> -->
-        <h2>Welcome to relationship model</h2>
-        <h1>
-          Is your relationship in trouble and in need of some serious work?
-        </h1>
-
-        <p id="text"></p>
-        <span class="cursor"></span>
-
-        <!-- <p>
-          Is your relationship in a good space but you just know it could be
-          great?
-        </p> -->
-        <!-- <h1>Rebuild Your Relationship From the Inside Out</h1>
-        <div class="hero-subtitle">
-          A gentle, structured approach to understanding yourself, improving
-          communication, and creating emotional stability in your relationship.
+    <header class="nav-header">
+      <div class="nav-content">
+        <div class="nav-logo">
+          <!-- <img src="" alt="Relationship Model" /> -->
+          <h1>Relationship Model</h1>
         </div>
-        <p>
-          If you often feel misunderstood, disconnected, or unsure how to
-          express yourself without conflict, this program will help you
-          understand your patterns and learn how to communicate in a way that
-          brings clarity instead of tension.
-        </p>
-        <a href="#cta" class="btn hero-btn">Begin Your Journey</a> -->
+
+        <nav class="header-nav">
+          <ul class="header-nav-links">
+            <!-- <li class="current"><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Sanctuaries</a></li>
+            <li><a href="#">Contact</a></li> -->
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#benefits">Benefits</a></li>
+            <li><a href="#learning">What You'll Learn</a></li>
+          </ul>
+
+          <a href="" class="header-contact-num"> Join Now </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero-header" id="home">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="top-text">Welcome to relationship model</p>
+
+          <h1>
+            Is your relationship in trouble and in need of some serious work?
+          </h1>
+
+          <p id="sub-text" class="sub-text"></p>
+          <span class="cursor"></span>
+
+          <div class="hero-buttons">
+            <a href="#" class="btn-primary">Read More</a>
+
+            <button class="btn-play" id="playBtn">
+              <span></span>
+            </button>
+
+            <span class="play-text">Play Video</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="videoModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Youtube Video</h3>
+            <button class="close-btn" id="closeModal">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <iframe
+              id="videoFrame"
+              loading="lazy"
+              src=""
+              allow="autoplay"
+              allowfullscreen
+            >
+            </iframe>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- About the Program -->
-    <section class="section-light">
+    <section class="section-light" id="about">
       <div class="container about-program">
         <div
           class="floating-element"
@@ -102,7 +107,7 @@
           style="width: 200px; height: 200px; bottom: 20%; right: 10%"
         ></div>
 
-        <div class="about-img animate slide-in-left">
+        <div class="about-img">
           <img
             src="https://images.pexels.com/photos/1635536/pexels-photo-1635536.jpeg"
             loading="lazy"
@@ -110,21 +115,6 @@
           />
         </div>
         <div>
-          <!-- <div class="animate slide-in-right"> -->
-          <!-- <h2 class="about-section-title">
-            A Practical Approach to Emotional Maturity
-          </h2> -->
-          <!-- <p class="section-subtitle">
-            This program is designed for women who want more clarity, emotional
-            steadiness, and healthier communication in their relationships. You
-            will learn where your reactions come from, how to manage them, and
-            how to show up in ways that feel calm and grounded
-          </p>
-          <p class="section-subtitle">
-            When you understand yourself, you communicate differently and your
-            relationship responds to that change.
-          </p> -->
-
           <p class="section-subtitle">
             The Relationship Model is a proven conceptual model to help you
             frame and design your relationship for happiness, success and
@@ -213,7 +203,7 @@
     </section>
 
     <!-- What could you do with this knowledge -->
-    <section class="section-light">
+    <section class="section-light" id="benefits">
       <div class="relation-title">
         <h2>What could you do with this knowledge</h2>
       </div>
@@ -244,6 +234,7 @@
       </div>
     </section>
 
+    <!-- The Relationship Model is not theoretical -->
     <section class="section-warm">
       <div class="blissfully-signup">
         <div class="form-header">
@@ -274,14 +265,17 @@
       </div>
     </section>
 
+    <!-- addressing-fears -->
     <section class="addressing-fears section-light">
       <div class="address">
         <div class="img">
           <img
-            src="https://images.pexels.com/photos/27167568/pexels-photo-27167568.jpeg"
+            src="images/chains.png"
             alt="Adressing Your Fears"
+            loading="lazy"
           />
           <!-- src="https://images.pexels.com/photos/3754289/pexels-photo-3754289.jpeg" -->
+          <!-- src="https://images.pexels.com/photos/27167568/pexels-photo-27167568.jpeg" -->
         </div>
 
         <div class="content1">
@@ -342,84 +336,18 @@
         </div>
         <div class="img">
           <img
-            src="https://images.pexels.com/photos/33640533/pexels-photo-33640533.jpeg"
+            src="images/brokenchain.png"
             alt="Adressing Your Fears"
+            loading="lazy"
           />
+
+          <!-- src="https://images.pexels.com/photos/33640533/pexels-photo-33640533.jpeg" -->
         </div>
       </div>
     </section>
 
-    <!-- Vision Section -->
-    <!-- <section class="section-warm vision-bg animate fade-in-up"> -->
-    <!-- <section>
-      <div
-        class="floating-element"
-        style="width: 200px; height: 200px; bottom: 20%; right: 10%"
-      ></div>
-      <div class="container learn-section">
-        <h3 style="margin-bottom: 1.5rem; color: var(--chocolate)">
-          What you will learn is that:
-        </h3>
-        <ul class="for-you-list">
-          <li>You feel unheard or misunderstood in your relationship.</li>
-          <li>You want fewer arguments and more calm conversations.</li>
-          <li>
-            You keep repeating the same patterns and don't know how to stop.
-          </li>
-          <li>You want to feel emotionally safe with your partner.</li>
-          <li>You're tired of confusion and want more clarity.</li>
-          <li>
-            You're ready to work on yourself so your relationship can improve.
-          </li>
-        </ul>
-      </div>
-    </section> -->
-
-    <!-- <section>
-      <div class="holding-back-section">
-        <h2>What is really holding you back?</h2>
-        <p>
-          <strong
-            >It's time to get real this is your life we are talking
-            about.</strong
-          >
-          Doing this work is hard. In some cases there is pain and betrayal.
-          Sometimes it might be too easy to leave it rather than address it. No
-          one ever taught us this “stuff”.
-        </p>
-        <div class="holding-content">
-          <div>
-            <p>But you see it all around you:</p>
-            <ul style="margin-left: 1.5rem">
-              <li>Some people seem to get lucky in a relationship</li>
-              <li>All the “good” guys and gals are taken</li>
-              <li>
-                Others just look so happy they seem to have it all together
-              </li>
-            </ul>
-          </div>
-          <div>
-            <p>
-              <strong>Relationships are supposed to be:</strong> beach holidays,
-              great parties, beautiful clothing, smiles, cuddling, great
-              photographs... but deep down you know it's deeper.
-            </p>
-            <p class="callout" style="margin-top: 0.5rem">
-              Inside The Relationship Model there is a structured way to
-              understand what is needed and achieve your ideal relationship.
-              Don’t wait for the “right time”. Now is the time.
-            </p>
-          </div>
-        </div>
-        <p>
-          You just need a model and framework that works — and the courage to
-          take the first steps. Work through this course on your own, or
-          together with your significant other.
-        </p>
-      </div>
-    </section> -->
-
-    <section class="course-section">
+    <!-- What You Will Learn on This Course -->
+    <section class="course-section" id="learning">
       <h1>What You Will Learn on This Course</h1>
 
       <div class="lesson">
@@ -474,6 +402,7 @@
       </div>
     </section>
 
+    <!-- Why The Relationship Model Was Created -->
     <section class="relationship-section section-light">
       <!-- LEFT IMAGE -->
       <div class="relationship-left">
@@ -482,10 +411,15 @@
           alt="The Relationship Model"
         />
 
-        <div class="relationship-experience">
-          <h1>20</h1>
-          <p>Years</p>
-          <p>Experience</p>
+        <div
+          class="relationship-experience"
+          style="width: 200px; height: 200px"
+        >
+          <div class="relationship-subcard">
+            <h1 style="color: white">20</h1>
+            <h3>Years</h3>
+            <h6>Experience</h6>
+          </div>
         </div>
       </div>
 
@@ -514,62 +448,8 @@
           <!-- <a href="#cta" class="btn animate fade-in-up" -->
           <a href="#cta" class="btn">SIGN UP NOW </a>
         </div>
-        <!-- <span
-            ><a href="#" style="text-decoration: none; color: #4a1f0f"
-              >SIGN UP NOW</a
-            ></span
-          > -->
       </div>
     </section>
-
-    <!-- <section class="learn">
-      <div class="learn-img">
-        <img
-          src="https://images.pexels.com/photos/7640768/pexels-photo-7640768.jpeg"
-          alt="healthier Relationship"
-          width="450px"
-          loading="lazy"
-        />
-      </div>
-      <div class="learn-content">
-        <h2>What you will learn is that:</h2>
-        <p>
-          There are attributes and actions that you need to be aware of. These
-          attributes can be learnt When learnt, they allow you to bring your
-          best self to the relationship You can’t change or save others but you
-          can start making changes yourself
-        </p>
-        <p>
-          "The great enemy of communication, we find, is the illusion of it."
-          William H. Whyte Communication is the second great key in The
-          Relationship Model Most couples THINK they are communicating
-        </p>
-        <p class="callout" style="margin-top: 0.5rem">
-          "The great enemy of communication, we find, is the illusion of it."
-          William H. Whyte
-        </p>
-        <p>Learn what communication in a relationship should look like.</p>
-
-        <p>
-          You are the sum of all your past experiences, so is your partner.
-          Learn how to deeply understand yourself and your partner
-        </p>
-        <p>
-          You need to set time aside to build and design what makes your
-          relationship special Define what you want and how you will go about
-          achieving it
-        </p>
-        <p>
-          Relationships are hard work but they are also supposed to be fun
-          Understand and learn the adaptability needed in a relationship Learn
-          how to find the fun, keep the fun, keep the adventure.
-        </p>
-
-        <div class="learn-btn">
-          <a href="#cta" class="btn">SIGN UP NOW </a>
-        </div>
-      </div>
-    </section> -->
 
     <!-- This is For You -->
     <section class="section-warm for-you-bg">
@@ -579,10 +459,10 @@
         </h2>
         <div class="for-you-container">
           <div>
-            <h3 style="margin-bottom: 1.5rem; color: var(--chocolate)">
+            <h3 style="margin-bottom: 1.5rem; font-size: 20px">
               This is for you. You owe this to yourself.
             </h3>
-            <ul class="for-you-list">
+            <ul class="for-you-list yes">
               <li>Those that believe in investing in themselves</li>
               <li>Individuals that want to have a great relationship .</li>
               <li>
@@ -602,10 +482,10 @@
             </ul>
           </div>
           <div>
-            <h3 style="margin-bottom: 1.5rem; color: var(--chocolate)">
+            <h3 style="margin-bottom: 1.5rem; font-size: 20px">
               Who will not benefit from The Relationship Model?:
             </h3>
-            <ul class="for-you-list">
+            <ul class="for-you-list no">
               <li>Those that sweep things under the rug</li>
               <li>Those that will not take care of themselves</li>
               <li>
@@ -628,220 +508,66 @@
       </div>
     </section>
 
-    <!-- Curriculum -->
-    <!-- <section class="section-light">
+    <!-- How do you know that this is for you?-->
+    <section class="section-light">
       <div class="container">
-        <h2 class="section-title">What You'll Learn Inside the Program</h2>
-        <p
-          class="section-subtitle"
-          style="
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 3rem;
-            font-size: 1.2rem;
-          "
-        >
-          A comprehensive curriculum designed to take you from awareness to
-          application
-        </p>
+        <h2 class="section-title">How do you know that this is for you?</h2>
 
-        <div class="modules-container">
-          <div class="module-card animate bounce-in-down">
-            <div class="module-number">01</div>
-            <h3>Understanding Your Patterns</h3>
-            <p>
-              A look into why you react the way you do, what triggers you, and
-              how past experiences influence your current relationship.
-            </p>
-          </div>
-          <div class="module-card animate bounce-in-up">
-            <div class="module-number">02</div>
-            <h3>Emotional Regulation & Safety</h3>
-            <p>
-              How to calm your responses, avoid emotional spirals, and create an
-              environment where both of you feel more stable.
-            </p>
-          </div>
-          <div class="module-card animate bounce-in-down">
-            <div class="module-number">03</div>
-            <h3>Communication Skills That Reduce Conflict</h3>
-            <p>
-              Practical tools to express yourself clearly, talk without raising
-              tension, and handle difficult conversations.
-            </p>
-          </div>
-          <div class="module-card animate bounce-in-up">
-            <div class="module-number">04</div>
-            <h3>Building a Mature, Secure Relationship</h3>
-            <p>
-              Habits, boundaries, and emotional practices that help your
-              relationship grow in a healthy direction.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Meet Your Coach -->
-    <!-- <section class="section-warm coach-bg animate">
-      <div class="container">
-        <h2 class="section-title">Meet Your Coach</h2>
-        <div class="coach-container">
-          <div class="coach-content animate slide-in-left">
-            <p
-              style="margin-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.8"
-            >
-              I created this program after noticing how many women struggle with
-              communication, emotional confusion, and repeated patterns they
-              don’t fully understand.
-            </p>
-            <p
-              style="margin-bottom: 1.5rem; font-size: 1.2rem; line-height: 1.8"
-            >
-              My approach is simple: understand yourself first, then learn the
-              skills that make connection easier. I teach from experience,
-              research, and real conversations with women who want healthier,
-              more stable relationships.
-            </p>
-          </div>
-          <div class="coach-image-container animate roll-in">
-            <div class="coach-ring"></div>
-            <div class="coach-image">
-              <img src="images/your-coach.jpeg" alt="Your Coach" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- What's Included -->
-    <!-- <section class="section-light">
-      <div class="container">
-        <h2 class="section-title">What You'll Receive</h2>
         <div class="included-grid">
           <div class="included-item animate fade-in-left">
-            <i class="fas fa-book-open"></i>
+            <i class="fas fa-brain"></i>
             <div>
-              <h4>Four Guided Modules</h4>
-              <p>Step-by-step curriculum with video lessons and worksheets.</p>
-            </div>
-          </div>
-          <div class="included-item animate fade-in-right">
-            <i class="fas fa-tasks"></i>
-            <div>
-              <h4>Practical Exercises</h4>
               <p>
-                Reflection prompts and communication tools you can apply
-                immediately.
+                Have deep conversations that stimulate your mind and deepen your
+                connection
               </p>
             </div>
           </div>
+
+          <div class="included-item animate fade-in-right">
+            <i class="fas fa-lightbulb"></i>
+            <div>
+              <p>Learn what other people rarely know</p>
+            </div>
+          </div>
+
+          <div class="included-item animate fade-in-down">
+            <i class="fas fa-chess-king"></i>
+            <div>
+              <p>Learn how to take control of your relationship</p>
+            </div>
+          </div>
+
+          <div class="included-item animate fade-in">
+            <i class="fas fa-ban"></i>
+            <div>
+              <p>Silent treatment is not what your relationship needs to be</p>
+            </div>
+          </div>
+
           <div class="included-item animate fade-in-down">
             <i class="fas fa-comments"></i>
             <div>
-              <h4>Frameworks for Regulating Emotions</h4>
-              <p>Learn how to manage emotional responses in real time.</p>
+              <p>Learn how to share opinions that do not end in conflict</p>
             </div>
           </div>
-          <div class="included-item animate fade-in">
-            <i class="fas fa-infinity"></i>
-            <div>
-              <h4>Lifetime Access</h4>
-              <p>Return to the materials whenever you need a refresher.</p>
-            </div>
-          </div>
-          <div class="included-item animate fade-in-down">
-            <i class="fas fa-hands-helping"></i>
-            <div>
-              <h4>Support & Consistency</h4>
-              <p>Guidance to help you stay consistent with the program.</p>
-            </div>
-          </div>
+
           <div class="included-item animate fade-in-left">
-            <i class="fas fa-star"></i>
+            <i class="fas fa-handshake"></i>
             <div>
-              <h4>Examples of Healthy Communication</h4>
-              <p>Real-life scripts and scenarios to learn from.</p>
+              <p>Stop competing with your partner and start thriving</p>
+            </div>
+          </div>
+
+          <div class="included-item animate fade-in-left">
+            <i class="fas fa-crown"></i>
+            <div>
+              <p>Be a power couple!</p>
             </div>
           </div>
         </div>
       </div>
-    </section> -->
-
-    <!-- Testimonials -->
-    <!-- <section class="section-warm testimonial-bg">
-      <div class="container">
-        <h2 class="section-title">What Others Are Saying</h2>
-
-        <div class="testimonials-container">
-          <div class="testimonial-slider" id="testimonial-slider">
-            <div class="testimonial-card">
-              <p>
-                "Talking used to turn into arguments. Now I can express myself
-                without fear. This program helped me see my patterns and change
-                the way I show up in my relationship."
-              </p>
-              <div style="font-weight: 600; color: var(--chocolate)">
-                - Sarah, 34
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <p>
-                "I understand myself more. I react less. We connect better. The
-                Relationship Model gave us a framework that actually works in
-                real life, not just in theory."
-              </p>
-              <div style="font-weight: 600; color: var(--chocolate)">
-                - Jessica, 41
-              </div>
-            </div>
-            <div class="testimonial-card">
-              <p>
-                "This was the wake up call I needed. For the first time, I have
-                tools that actually help during tough conversations. Our
-                relationship feels completely different now."
-              </p>
-              <div style="font-weight: 600; color: var(--chocolate)">
-                - Maya, 38
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-nav">
-            <div class="testimonial-dot active" data-slide="0"></div>
-            <div class="testimonial-dot" data-slide="1"></div>
-            <div class="testimonial-dot" data-slide="2"></div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
-    <!-- Final CTA -->
-    <!-- <section class="section-light" id="cta">
-      <div class="container cta-section">
-        <div
-          class="floating-element"
-          style="width: 300px; height: 300px; top: 10%; left: 5%"
-        ></div>
-        <div
-          class="floating-element"
-          style="width: 200px; height: 200px; bottom: 20%; right: 10%"
-        ></div>
-        <h2 class="section-title">
-          You don't have to keep repeating the same cycle.
-        </h2>
-        <p class="cta-subtitle animate fade-in-up">
-          If you're ready to understand yourself, communicate better, and build
-          a healthier relationship, this program will guide you step by step.
-          This is not just a course, it's a different way of thinking and a
-          different way of being.
-        </p>
-
-        <div style="text-align: center">
-          <a href="#cta" class="btn animate fade-in-up">Join the Program</a>
-        </div>
-      </div>
-    </section> -->
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -856,45 +582,5 @@
 
     <script src="js/index.js" defer></script>
     <script src="js/animation.js" defer></script>
-    <script>
-      const texts = [
-        "Ever wondered how to have a relationship of true unity?",
-        "Did you know there is knowledge and a framework that builds power couples?",
-        "Is your relationship in trouble and in need of some serious work?",
-        "Are you about to begin a new relationship and find yourself petrified of it ending in ruins?",
-        "Is your relationship in a good space but you just know it could be great?",
-      ];
-
-      const textElement = document.getElementById("text");
-
-      let textIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function typeEffect() {
-        const currentText = texts[textIndex];
-
-        if (!isDeleting) {
-          textElement.textContent = currentText.substring(0, charIndex++);
-        } else {
-          textElement.textContent = currentText.substring(0, charIndex--);
-        }
-
-        let speed = isDeleting ? 40 : 80;
-
-        if (!isDeleting && charIndex === currentText.length) {
-          speed = 1500; // pause before deleting
-          isDeleting = true;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          textIndex = (textIndex + 1) % texts.length;
-          speed = 500; // pause before typing next
-        }
-
-        setTimeout(typeEffect, speed);
-      }
-
-      typeEffect();
-    </script>
   </body>
 </html>
