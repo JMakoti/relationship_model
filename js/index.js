@@ -94,4 +94,3 @@ function handleNavbarScroll() {
 window.addEventListener("scroll", handleNavbarScroll);
 window.addEventListener("resize", handleNavbarScroll);
 window.addEventListener("load", handleNavbarScroll);
-

@@ -1,0 +1,1089 @@
+
+/* --------------------------------------------
+   BASE MOBILE STYLES (Default - max-width: 575px)
+--------------------------------------------- */
+@media (max-width: 576px) {
+  /* General Container Adjustments */
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  /* Section Padding */
+  section {
+    padding: 3rem 1rem;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-header {
+    padding: 120px 1rem 60px;
+    min-height: auto;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-content p.top-text {
+    font-size: 0.9rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-content p.sub-text {
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    gap: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .play-text {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+  }
+
+  .btn-play::before,
+  .btn-play:after {
+    width: 45px;
+    height: 45px;
+  }
+
+  .btn-play span {
+    border-left: 12px solid var(--rm-white);
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+  }
+
+  .modal{
+    top: -50px;
+  }
+
+  /* Navigation */
+  .nav-content {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-logo h1 {
+    font-size: 1.25rem;
+  }
+
+  .header-nav {
+    gap: 1rem;
+  }
+
+  .header-nav-links {
+    display: none;
+  }
+
+  .header-contact-num {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  /* About Program Section */
+  .about-program {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-program .section-subtitle {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .about-program .about-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+  }
+
+  .designs {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .design-card i {
+    font-size: 1.5rem;
+  }
+
+  .design-btn .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Vision Section */
+  .vision-content {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .vision-cards {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .vision-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .vision-imgs img {
+    height: 220px;
+  }
+
+  .vision-card p {
+    font-size: 1rem;
+  }
+
+  /* Relationship Container (4 cards + circle) */
+  .relationship-container {
+    height: auto;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .center-circle {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 200px;
+    height: 200px;
+    margin: 1rem auto;
+  }
+
+  .card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .relation-title h2 {
+    font-size: 1.75rem;
+  }
+
+  /* Blissfully Signup Form */
+  .blissfully-signup {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .blissfully-signup .form-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .blissfully-signup .form-header p {
+    font-size: 0.95rem;
+  }
+
+  .blissfully-signup .blissfully-form {
+    width: 100%;
+    padding: 2rem 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+
+  /* Addressing Fears Section */
+  .address {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .address:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .img img {
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+  }
+
+  .content1 h2 {
+    font-size: 1.5rem;
+  }
+  .content,
+  .content1 {
+    text-align: start;
+  }
+  .content p,
+  .content1 p {
+    font-size: 0.95rem;
+  }
+
+  .content1 p:first-child {
+    font-size: 1.25rem;
+  }
+
+  /* Course Section */
+  .course-section {
+    padding: 2rem 1rem;
+  }
+
+  .course-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .lesson {
+    padding: 1.25rem;
+  }
+
+  .lesson h3 {
+    font-size: 1.2rem;
+  }
+
+  .lesson p {
+    font-size: 0.9rem;
+  }
+
+  /* Relationship Section (Why Created) */
+  .relationship-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .relationship-left img {
+    width: 100%;
+  }
+
+  .relationship-experience {
+    right: 10px;
+    top: 10px;
+    width: 130px !important;
+    height: 130px !important;
+    padding: 0;
+  }
+
+  .relationship-subcard {
+    padding: 1rem;
+    height: 130px;
+  }
+
+  .relationship-subcard h1 {
+    font-size: 2rem;
+  }
+
+  .relationship-subcard h3 {
+    font-size: 1.2rem;
+  }
+
+  .relationship-subcard h6 {
+    font-size: 0.8rem;
+  }
+
+  .relationship-right h1 {
+    font-size: 1.75rem;
+  }
+
+  .relationship-right .subtitle {
+    font-size: 1rem;
+  }
+
+  .relationship-desc {
+    font-size: 0.95rem;
+  }
+
+  /* For You Section */
+  .for-you-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .for-you-list {
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .for-you-list li {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem 0.6rem 2rem;
+  }
+
+  /* Included Grid (How do you know) */
+  .included-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .included-item {
+    padding: 1rem;
+  }
+
+  .included-item:first-child {
+    grid-column: span 1;
+  }
+
+  .included-item i {
+    font-size: 1.25rem;
+  }
+
+  .included-item p {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-logo {
+    font-size: 1.5rem;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 95%;
+    max-height: 90vh;
+  }
+
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Button General */
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+/* --------------------------------------------
+   TABLET STYLES (576px - 991px)
+--------------------------------------------- */
+@media (min-width: 576px) and (max-width: 991px) {
+  /* Section Padding */
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  .container {
+    padding: 0 2rem;
+  }
+
+
+  .hero-container {
+    height: 40vh;
+  }
+  /* Hero Section */
+  .hero-header {
+    padding: 120px 2rem 60px;
+    min-height: 70vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content{
+    justify-content: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p.top-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.sub-text {
+    font-size: 1.3rem;
+  }
+
+  .hero-buttons {
+    gap: 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.75rem;
+    font-size: 0.95rem;
+  }
+
+  .play-text {
+    font-size: 0.95rem;
+  }
+
+
+
+
+
+  /* Navigation - Show nav links on tablet */  
+  .header-nav-links {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .header-nav-links a {
+    font-size: 1rem;
+  }
+
+  .nav-logo h1 {
+    font-size: 1.2rem;
+  }
+
+  /* Hide toggle button on tablet and larger */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 90%;
+    max-width: 700px;
+    max-height: 80vh;
+  }
+
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* About Program */
+  .about-program {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-program .section-subtitle {
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-program .about-img img {
+    width: 500px;
+    height: 500px;
+  }
+
+  .designs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .design-btn .btn {
+    width: 100%;
+    text-align: center;
+  }
+  /* Vision Cards */
+  .vision-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vision-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Relationship Container */
+  .relationship-container {
+    height: 500px;
+    position: relative;
+  }
+
+  .center-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+    height: 220px;
+  }
+
+  .card {
+    position: absolute;
+    width: 260px;
+  }
+
+  .top-left {
+    top: 0;
+    left: 5%;
+  }
+
+  .top-right {
+    top: 0;
+    right: 5%;
+  }
+
+  .bottom-left {
+    bottom: 0;
+    left: 5%;
+  }
+
+  .bottom-right {
+    bottom: 0;
+    right: 5%;
+  }
+
+  /* Blissfully Form */
+  .blissfully-signup {
+    width: 90%;
+  }
+
+  .blissfully-signup .blissfully-form {
+    width: 100%;
+    padding: 3rem;
+  }
+
+  /* Addressing Fears */
+  .address {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .address:nth-child(2) {
+    flex-direction: column;
+  }
+
+  .img img {
+    height: 500px;
+  }
+
+  .content,
+  .content1 {
+    text-align: start;
+  }
+
+  /* Course Section */
+  .course-section h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Relationship Section */
+  .relationship-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .relationship-right h1 {
+    font-size: 2rem;
+  }
+
+  /* For You Grid */
+  .for-you-container {
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 1rem; */
+    display: block;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .for-you-container h3 {
+    margin-top: 20px;
+  }
+
+  /* Included Grid */
+  .included-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .included-item:first-child {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------
+   LAPTOP STYLES (992px - 1199px)
+--------------------------------------------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Container */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .hero-container {
+    height: 300px;
+  }
+  .hero-header {
+    min-height: 400px;
+    overflow: visible;
+  }
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  /* Navigation */
+  .header-nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  /* Ensure toggle is hidden */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 85%;
+    max-width: 800px;
+    max-height: 75vh;
+  }
+
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* About Program */
+  .about-program {
+    gap: 3rem;
+  }
+
+  .about-program .about-img img {
+    height: 400px;
+    width: auto;
+  }
+
+  /* Vision Cards */
+  .vision-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .vision-card {
+    width: 100%;
+  }
+
+  /* Relationship Container */
+  .relationship-container {
+    max-width: 960px;
+  }
+
+  .center-circle {
+    width: 260px;
+    height: 260px;
+  }
+
+  .card {
+    width: 280px;
+  }
+
+  .top-left {
+    top: -20px;
+    left: 15%;
+  }
+
+  .top-right {
+    top: 150px;
+    right: 5%;
+  }
+
+  .bottom-left {
+    bottom: 150px;
+    left: 5%;
+  }
+
+  .bottom-right {
+    bottom: -20px;
+    right: 15%;
+  }
+
+  /* Blissfully Form */
+  .blissfully-signup {
+    width: 800px;
+  }
+
+  .blissfully-signup .blissfully-form {
+    width: 100%;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 80%;
+    max-width: 900px;
+    max-height: 70vh;
+  }
+
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Addressing Fears */
+  .img img {
+    height: 400px;
+  }
+
+  /* Course Section */
+  .course-section {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  /* Relationship Section */
+  .relationship-section {
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 3rem;
+  }
+  .relationship-right h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* For You Grid */
+  .for-you-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  /* Included Grid */
+  .included-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .included-item:first-child {
+    grid-column: span 2;
+  }
+}
+
+/* --------------------------------------------
+   DESKTOP STYLES (1200px and above)
+--------------------------------------------- */
+@media (min-width: 1200px) {
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* Hero Section */
+  .hero-header {
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-content h1 {
+    font-size: 5rem;
+  }
+
+  .hero-content p.top-text {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p.sub-text {
+    font-size: 1.3rem;
+  }
+
+  /* Navigation */
+  .header-nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .header-nav-links a {
+    font-size: 1.1rem;
+  }
+
+  /* Hide toggle on desktop */
+  .nav-toggle {
+    display: none;
+  }
+
+  /* About Program */
+  .about-program {
+    gap: 4rem;
+  }
+
+  .about-program .about-img img {
+    height: 500px;
+    width: auto;
+  }
+
+  .designs {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  /* Vision Cards */
+  .vision-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Relationship Container */
+  .relationship-container {
+    max-width: 1100px;
+    height: 600px;
+  }
+
+  .card {
+    width: 300px;
+  }
+
+  /* Blissfully Form */
+  .blissfully-signup {
+    width: 1000px;
+  }
+
+  /* Modal Responsive */
+  .modal-content {
+    width: 75%;
+    max-width: 1000px;
+    max-height: 65vh;
+  }
+
+  .modal-body {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+  }
+
+  .modal-body iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Addressing Fears */
+  .addressing-fears {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .img img {
+    height: 500px;
+  }
+
+  /* Course Section */
+  .course-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  /* Relationship Section */
+  .relationship-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+  }
+
+  /* For You Container */
+  .for-you-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 2.5rem;
+  }
+
+  .for-you-list {
+    min-height: 470px;
+  }
+
+  /* Included Grid */
+  .included-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 1.75rem;
+  }
+}
+
+/* --------------------------------------------
+   EXTRA LARGE SCREENS (1400px and above)
+--------------------------------------------- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .hero-content {
+    max-width: 900px;
+  }
+
+  .hero-content h1 {
+    font-size: 6rem;
+    /* line-height: 2; */
+  }
+
+  .hero-content p.sub-text {
+    font-size: 3rem;
+  }
+
+  .relationship-container {
+    max-width: 1300px;
+  }
+
+  .card {
+    width: 320px;
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .course-section {
+    max-width: 1300px;
+  }
+
+  .relationship-section {
+    max-width: 1300px;
+  }
+
+  /* Hide toggle on XL */
+  .nav-toggle {
+    display: none;
+  }
+}
+
+/* --------------------------------------------
+   UTILITY CLASSES FOR RESPONSIVE BEHAVIOR
+--------------------------------------------- */
+
+/* Hide on Mobile - Show on Larger Screens */
+.hide-on-mobile {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .hide-on-mobile {
+    display: block;
+  }
+}
+
+/* Text alignment helpers */
+.text-center-mobile {
+  text-align: center;
+}
+
+@media (min-width: 576px) {
+  .text-center-mobile {
+    text-align: left;
+  }
+}
+
+/* Image fluidity - ensures all images are responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ensure iframes are responsive */
+iframe {
+  max-width: 100%;
+}
+
+/* Fix for overflow issues */
+body {
+  overflow-x: hidden;
+}
+
+/* Improve touch targets on mobile */
+@media (max-width: 575px) {
+  .btn,
+  .btn-primary,
+  .header-contact-num,
+  .design-card,
+  .for-you-list li {
+    cursor: pointer;
+  }
+
+  /* Increase tap target size */
+  .header-nav-links a,
+  .footer-logo,
+  .close-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Print styles - optional */
+@media print {
+  .btn,
+  .hero-buttons,
+  .blissfully-form,
+  .modal,
+  .header-nav {
+    display: none;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  section {
+    padding: 1rem;
+    page-break-inside: avoid;
+  }
+}
