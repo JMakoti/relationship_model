@@ -16,27 +16,28 @@ const videoFrame = document.getElementById("videoFrame");
 
 const videoURL = "https://www.youtube.com/embed/910-SqNfno4?autoplay=1";
 
+// Debounced modal close function
+function closeVideoModal() {
+  modal.style.display = "none";
+  videoFrame.src = "";
+  playBtn.classList.remove("playing");
+}
+
 playBtn.onclick = () => {
   modal.style.display = "flex";
   videoFrame.src = videoURL;
   playBtn.classList.add("playing");
 };
 
-closeModal.onclick = () => {
-  modal.style.display = "none";
-  videoFrame.src = "";
-  playBtn.classList.remove("playing");
-};
+closeModal.onclick = closeVideoModal;
 
 window.onclick = (e) => {
   if (e.target === modal) {
-    modal.style.display = "none";
-    videoFrame.src = "";
-    playBtn.classList.remove("playing");
+    closeVideoModal();
   }
 };
 
-// Typewriter Effect
+// Typewriter Effect - Optimized
 const texts = [
   "Ever wondered how to have a relationship of true unity?",
   "Did you know there is knowledge and a framework that builds power couples?",
@@ -50,6 +51,7 @@ const textElement = document.getElementById("sub-text");
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
+let typeTimeout;
 
 function typeEffect() {
   const currentText = texts[textIndex];
@@ -71,26 +73,53 @@ function typeEffect() {
     speed = 500; // pause before typing next
   }
 
-  setTimeout(typeEffect, speed);
+  typeTimeout = setTimeout(typeEffect, speed);
 }
 
 typeEffect();
 
-// Navbar Scroll
+// Navbar Scroll - Optimized with RequestAnimationFrame and Debouncing
 const navHeader = document.querySelector(".nav-header");
 const heroHeader = document.querySelector(".hero-header");
+
+let ticking = false;
+let lastScrollY = 0;
 
 function handleNavbarScroll() {
   if (!navHeader || !heroHeader) return;
 
   const triggerPoint = heroHeader.offsetHeight - navHeader.offsetHeight;
-  if (window.scrollY > triggerPoint) {
-    navHeader.classList.add("scrolled");
+  
+  if (lastScrollY > triggerPoint) {
+    if (!navHeader.classList.contains("scrolled")) {
+      navHeader.classList.add("scrolled");
+    }
   } else {
-    navHeader.classList.remove("scrolled");
+    if (navHeader.classList.contains("scrolled")) {
+      navHeader.classList.remove("scrolled");
+    }
+  }
+  
+  ticking = false;
+}
+
+function onScroll() {
+  lastScrollY = window.scrollY;
+  
+  if (!ticking) {
+    window.requestAnimationFrame(handleNavbarScroll);
+    ticking = true;
   }
 }
 
-window.addEventListener("scroll", handleNavbarScroll);
-window.addEventListener("resize", handleNavbarScroll);
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("resize", () => {
+  lastScrollY = window.scrollY;
+  handleNavbarScroll();
+});
 window.addEventListener("load", handleNavbarScroll);
+
+// Cleanup on page unload
+window.addEventListener("beforeunload", () => {
+  if (typeTimeout) clearTimeout(typeTimeout);
+});

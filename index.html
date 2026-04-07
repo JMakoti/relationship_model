@@ -4,19 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Relationship Model | Interactive Experience</title>
+    <!-- Preconnect to critical origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <!-- Preload critical fonts -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    />
+    <!-- Google Fonts with font-display swap for faster rendering -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome - async load to prevent render blocking -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      media="print"
+      onload="this.media='all';this.onload=null;"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      />
+    </noscript>
+    <!-- Main stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/animate.css" />
+    <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
+    <!-- <link rel="stylesheet" href="css/animate.css" /> -->
   </head>
   <body>
     <!-- Preload Spinner -->
@@ -167,6 +186,7 @@
             <img
               src="https://images.pexels.com/photos/35515821/pexels-photo-35515821.jpeg"
               alt="Looking for Yourself"
+              loading="lazy"
             />
           </div>
           <p>
@@ -179,6 +199,7 @@
             <img
               src="https://images.pexels.com/photos/7741569/pexels-photo-7741569.jpeg"
               alt="Fantastic relationship"
+              loading="lazy"
             />
           </div>
           <p>
@@ -191,6 +212,7 @@
             <img
               src="https://images.pexels.com/photos/11525704/pexels-photo-11525704.jpeg"
               alt="Marriage"
+              loading="lazy"
             />
           </div>
           <p>
@@ -208,7 +230,7 @@
       </div>
       <div class="relationship-container">
         <div class="center-circle">
-          <img src="images/relationshipmodeltext.jpg" alt="hands holding" />
+          <img src="images/relationshipmodeltext.jpg" alt="hands holding" loading="lazy" />
         </div>
 
         <div class="card top-left">
@@ -408,6 +430,7 @@
         <img
           src="https://images.pexels.com/photos/3754289/pexels-photo-3754289.jpeg"
           alt="The Relationship Model"
+          loading="lazy"
         />
 
         <div
@@ -593,6 +616,6 @@
     </footer>
 
     <script src="js/index.js" defer></script>
-    <script src="js/animation.js" defer></script>
+    <!-- <script src="js/animation.js" defer></script> -->
   </body>
 </html>
