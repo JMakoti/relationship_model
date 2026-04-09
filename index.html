@@ -24,7 +24,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       media="print"
-      onload="this.media='all';this.onload=null;"
+      onload="
+        this.media = 'all';
+        this.onload = null;
+      "
     />
     <noscript>
       <link
@@ -71,43 +74,12 @@
     <section class="hero-header" id="home">
       <div class="hero-container">
         <div class="hero-content">
-          <p class="top-text">Welcome to relationship model</p>
-
-          <h1>
-            Is your relationship in trouble and in need of some serious work?
-          </h1>
-
-          <p id="sub-text" class="sub-text"></p>
-          <span class="cursor"></span>
+          <div>
+            <h1>Ever wondered how to have a relationship of true unity?</h1>
+          </div>
 
           <div class="hero-buttons">
             <a href="#" class="btn-primary">Read More</a>
-
-            <button class="btn-play" id="playBtn">
-              <span></span>
-            </button>
-
-            <span class="play-text">Play Video</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="modal" id="videoModal">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h3>Youtube Video</h3>
-            <button class="close-btn" id="closeModal">&times;</button>
-          </div>
-
-          <div class="modal-body">
-            <iframe
-              id="videoFrame"
-              loading="lazy"
-              src=""
-              allow="autoplay"
-              allowfullscreen
-            >
-            </iframe>
           </div>
         </div>
       </div>
@@ -230,7 +202,11 @@
       </div>
       <div class="relationship-container">
         <div class="center-circle">
-          <img src="images/relationshipmodeltext.jpg" alt="hands holding" loading="lazy" />
+          <img
+            src="images/relationshipmodeltext.jpg"
+            alt="hands holding"
+            loading="lazy"
+          />
         </div>
 
         <div class="card top-left">
@@ -270,13 +246,20 @@
         <div class="blissfully-form">
           <form id="signupForm">
             <div class="form-group">
-              <input type="text" placeholder="Your Name" required />
+              <input type="text" placeholder="Your Name *" required />
             </div>
             <div class="form-group">
-              <input type="email" placeholder="Your Email" required />
+              <input type="email" placeholder="Your Email *" required />
             </div>
             <div class="form-group">
-              <input type="text" placeholder="Contact" required />
+              <input type="text" placeholder="Your Contact" />
+            </div>
+            <div class="form-group">
+              <textarea
+                placeholder="Your Message *"
+                rows="5"
+                required
+              ></textarea>
             </div>
             <button type="submit" class="btn" style="width: 100%">
               SIGN UP NOW TO JOIN OUR NEXT GROUP
@@ -325,12 +308,14 @@
           </p>
         </div>
       </div>
+      <div class="quote-container">
+        <p class="quote-divider">
+          Deep down inside you know this is not always true but it's what you
+          have told yourself…
+        </p>
+      </div>
       <div class="address">
         <div class="content">
-          <p>
-            Deep down inside you know this is not always true but it's what you
-            have told yourself…
-          </p>
           <p>Relationships are supposed to be:</p>
           <ul>
             <li>Beach holidays</li>
@@ -476,70 +461,59 @@
     <!-- This is For You -->
     <section class="section-warm for-you-bg">
       <!-- <div class="container"> -->
-        <h2 class="section-title">
-          Who will benefit the most from The Relationship Model?
-        </h2>
-        <div class="for-you-container">
-          <div>
-            <h3
-              style="
-                margin-bottom: 1.5rem;
-                font-size: 20px;
-                padding-bottom: 20px;
-              "
-            >
-              This is for you. You owe this to yourself.
-            </h3>
-            <ul class="for-you-list yes">
-              <li>Those that believe in investing in themselves</li>
-              <li>Individuals that want to have a great relationship .</li>
-              <li>
-                Individuals that want to own their faults and move forward
-              </li>
-              <li>
-                Those that have been hurt and will not allow it to happen again
-              </li>
-              <li>
-                Those that want to learn about themselves and have fun doing it
-              </li>
-              <li>Those that want to become power couples</li>
-              <li>
-                Couples who work together on this as well as individuals have
-                greatly benefited from The Relationship Model
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3
-              style="
-                margin-bottom: 1.5rem;
-                font-size: 20px;
-                padding-bottom: 20px;
-                
-              "
-            >
-              Who will not benefit from The Model?:
-            </h3>
-            <ul class="for-you-list no">
-              <li>Those that sweep things under the rug</li>
-              <li>Those that will not take care of themselves</li>
-              <li>
-                Individuals that are always looking to point finger to others.
-              </li>
-              <li>Individuals that play the victim card</li>
-              <li>
-                Narcasissts - this phase is thrown around too much these days
-                but The Relationship Model will show what these narcissists
-                have, in the case of the emperor, that they have “no clothes”
-              </li>
-              <li>
-                Those that think they know everything and will not allow their
-                ego to teach them anything
-              </li>
-              <li>Those who cannot face their own shadow</li>
-            </ul>
-          </div>
+      <h2 class="section-title">
+        Who will benefit the most from The Relationship Model?
+      </h2>
+      <div class="for-you-container">
+        <div>
+          <h3
+            style="margin-bottom: 1.5rem; font-size: 20px; padding-bottom: 20px"
+          >
+            This is for you. You owe this to yourself.
+          </h3>
+          <ul class="for-you-list yes">
+            <li>Those that believe in investing in themselves</li>
+            <li>Individuals that want to have a great relationship .</li>
+            <li>Individuals that want to own their faults and move forward</li>
+            <li>
+              Those that have been hurt and will not allow it to happen again
+            </li>
+            <li>
+              Those that want to learn about themselves and have fun doing it
+            </li>
+            <li>Those that want to become power couples</li>
+            <li>
+              Couples who work together on this as well as individuals have
+              greatly benefited from The Relationship Model
+            </li>
+          </ul>
         </div>
+        <div>
+          <h3
+            style="margin-bottom: 1.5rem; font-size: 20px; padding-bottom: 20px"
+          >
+            Who will not benefit from The Model?:
+          </h3>
+          <ul class="for-you-list no">
+            <li>Those that sweep things under the rug</li>
+            <li>Those that will not take care of themselves</li>
+            <li>
+              Individuals that are always looking to point finger to others.
+            </li>
+            <li>Individuals that play the victim card</li>
+            <li>
+              Narcasissts - this phase is thrown around too much these days but
+              The Relationship Model will show what these narcissists have, in
+              the case of the emperor, that they have “no clothes”
+            </li>
+            <li>
+              Those that think they know everything and will not allow their ego
+              to teach them anything
+            </li>
+            <li>Those who cannot face their own shadow</li>
+          </ul>
+        </div>
+      </div>
       <!-- </div> -->
     </section>
 

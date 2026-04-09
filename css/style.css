@@ -50,10 +50,6 @@ a {
   transition: all 0.3s ease;
 }
 
-/* Prevent layout shift during animations */
-.modal {
-  will-change: opacity, visibility;
-}
 
 /* General */
 .container {
@@ -296,6 +292,10 @@ h6 {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  min-height: 100%;
 }
 
 /* Hero Section */
@@ -304,39 +304,35 @@ h6 {
     var(--bs-gradient),
     url("https://images.pexels.com/photos/7273304/pexels-photo-7273304.jpeg");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  padding: 100px 20px;
+  padding: 40px 20px;
   color: #000;
-  min-height: 100vh;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
 }
 
 /* Text Alignment */
 .hero-content {
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* gap: 1.5rem; */
 }
 
-/* Small heading */
-.hero-content p.top-text {
-  font-size: 20px;
-  color: var(--color-sec-brown);
-  margin-bottom: 15px;
-  font-weight: 500;
-}
 
 /* Main heading */
 .hero-content h1 {
-  font-size: 70px;
+  /* font-size: 70px; */
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--color-dark-brown);
 }
 
-/* Sub text */
-.hero-content p.sub-text {
-  font-size: 20px;
-  color: var(--color-dark-brown);
-}
 
 /* Buttons section */
 .hero-buttons {
@@ -355,127 +351,6 @@ h6 {
   text-decoration: none;
   margin-right: 20px;
   transition: 0.3s;
-}
-
-/* Play button */
-.btn-play {
-  position: relative;
-  width: 26px;
-  height: 26px;
-  padding: 18px 20px 20px 18px;
-  border: none;
-  cursor: pointer;
-  background: var(--color-sec-brown);
-}
-
-/* Triangle inside play button */
-.btn-play::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  transform: translate(-50%, -50%);
-  background: var(--color-sec-brown);
-  animation: pulse-border 1500ms ease-out infinite;
-}
-
-.btn-play:after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 60px;
-  height: 60px;
-  transform: translate(-50%, -50%);
-  background: var(--color-sec-brown);
-}
-
-.btn-play span {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  display: block;
-  width: 0;
-  height: 0;
-  border-left: 16px solid var(--rm-white);
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-}
-
-.btn-play.playing span {
-  display: none;
-}
-
-/* Play text */
-.play-text {
-  margin-left: 15px;
-  font-size: 18px;
-  color: var(--color-dark-brown);
-  font-weight: bold;
-}
-
-@keyframes pulse-border {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(2);
-    opacity: 0;
-  }
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
-}
-
-.modal-content {
-  width: 90%;
-  max-width: 800px;
-  background: #000;
-  max-height: 80vh;
-  overflow: hidden;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  color: white;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  color: var(--rm-white);
-  font-size: 25px;
-  cursor: pointer;
-}
-
-.modal-body {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-}
-
-.modal-body iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
 }
 
 /* About the Program */
@@ -693,6 +568,8 @@ h6 {
 .addressing-fears {
   width: 100%;
   margin: 20px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .address {
@@ -751,6 +628,36 @@ h6 {
   font-size: 1.6rem;
   font-weight: bold;
   color: var(--rm-white);
+}
+
+.quote-divider {
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid var(--color-sec-brown);
+  padding: 18px 22px 18px 45px;
+  border-radius: 14px;
+  color: var(--color-dark-brown);
+  font-style: italic;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); */
+  margin: 0 0 1rem;
+  position: relative;
+  text-align: center;
+}
+
+.quote-divider::before {
+  content: "“";
+  font-size: 3rem;
+  line-height: 1;
+  position: absolute;
+  left: 18px;
+  top: 12px;
+  color: var(--color-dark-brown)
+}
+
+.quote-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* LIST STYLE */
@@ -931,7 +838,7 @@ hr {
 .for-you-bg {
   background:
     linear-gradient(135deg, var(--ivory) 0%, rgba(232, 221, 216, 0.7) 100%),
-    url("../images/for-you-bg.png") no-repeat center;
+    url("../images/benefit_bg.png") no-repeat center;
   background-size: cover;
 }
 .for-you-container {
@@ -1048,7 +955,6 @@ footer {
 .nav-header,
 .btn,
 .btn-primary,
-.btn-play,
 .card,
 .design-card,
 .vision-card {
@@ -1068,10 +974,6 @@ section {
   contain: content;
 }
 
-/* Optimize modal rendering */
-.modal {
-  contain: layout style paint;
-}
 
 /* =========================================
    END PERFORMANCE OPTIMIZATIONS
@@ -1099,26 +1001,25 @@ section {
 
   /* Hero Section */
   .hero-header {
-    padding: 120px 1rem 60px;
-    min-height: auto;
+    padding: 35px 1rem;
+    min-height: 65vh;
+  }
+
+  .hero-container {
+    min-height: 100%;
   }
 
   .hero-content {
     max-width: 100%;
+    padding-top: 0;
   }
 
-  .hero-content p.top-text {
-    font-size: 0.9rem;
-  }
 
   .hero-content h1 {
     font-size: 2rem;
     line-height: 1.3;
   }
 
-  .hero-content p.sub-text {
-    font-size: 1rem;
-  }
 
   .hero-buttons {
     gap: 1rem;
@@ -1127,27 +1028,6 @@ section {
   .btn-primary {
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
-  }
-
-  .play-text {
-    font-size: 0.9rem;
-    margin-left: 0.5rem;
-  }
-
-  .btn-play::before,
-  .btn-play:after {
-    width: 45px;
-    height: 45px;
-  }
-
-  .btn-play span {
-    border-left: 12px solid var(--rm-white);
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
-  }
-
-  .modal{
-    top: -50px;
   }
 
   /* Navigation */
@@ -1444,26 +1324,6 @@ section {
     padding-top: 1rem;
   }
 
-  /* Modal Responsive */
-  .modal-content {
-    width: 95%;
-    max-height: 90vh;
-  }
-
-  .modal-body {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
-
-  .modal-body iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   /* Button General */
   .btn {
     padding: 0.75rem 1.5rem;
@@ -1485,31 +1345,25 @@ section {
 
 
   .hero-container {
-    height: 40vh;
+    height: auto;
   }
   /* Hero Section */
   .hero-header {
-    padding: 120px 2rem 60px;
+    padding: 45px 2rem 45px;
     min-height: 70vh;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
   }
 
   .hero-content{
     justify-content: center;
+    padding-top: 0;
   }
 
   .hero-content h1 {
     font-size: 2.5rem;
   }
 
-  .hero-content p.top-text {
-    font-size: 1.2rem;
-  }
-
-  .hero-content p.sub-text {
-    font-size: 1.3rem;
-  }
 
   .hero-buttons {
     gap: 1.5rem;
@@ -1545,27 +1399,6 @@ section {
   /* Hide toggle button on tablet and larger */
   .nav-toggle {
     display: none;
-  }
-
-  /* Modal Responsive */
-  .modal-content {
-    width: 90%;
-    max-width: 700px;
-    max-height: 80vh;
-  }
-
-  .modal-body {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
-
-  .modal-body iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 
   /* About Program */
@@ -1724,10 +1557,9 @@ section {
   }
 
   .hero-container {
-    height: 300px;
+    padding-top: 2rem;
   }
   .hero-header {
-    min-height: 400px;
     overflow: visible;
   }
 
@@ -1745,27 +1577,6 @@ section {
   /* Ensure toggle is hidden */
   .nav-toggle {
     display: none;
-  }
-
-  /* Modal Responsive */
-  .modal-content {
-    width: 85%;
-    max-width: 800px;
-    max-height: 75vh;
-  }
-
-  .modal-body {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
-
-  .modal-body iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 
   /* About Program */
@@ -1831,27 +1642,6 @@ section {
     width: 100%;
   }
 
-  /* Modal Responsive */
-  .modal-content {
-    width: 80%;
-    max-width: 900px;
-    max-height: 70vh;
-  }
-
-  .modal-body {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
-
-  .modal-body iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   /* Addressing Fears */
   .img img {
     height: 400px;
@@ -1904,23 +1694,19 @@ section {
   /* Hero Section */
   .hero-header {
     min-height: 100vh;
+    padding: 0;
+    margin: 0;
   }
 
   .hero-content {
     max-width: 800px;
+    padding-top: 0;
   }
 
   .hero-content h1 {
-    font-size: 5rem;
+    font-size: 4.4rem;
   }
 
-  .hero-content p.top-text {
-    font-size: 1.2rem;
-  }
-
-  .hero-content p.sub-text {
-    font-size: 1.3rem;
-  }
 
   /* Navigation */
   .header-nav-links {
@@ -1974,27 +1760,6 @@ section {
     width: 1000px;
   }
 
-  /* Modal Responsive */
-  .modal-content {
-    width: 75%;
-    max-width: 1000px;
-    max-height: 65vh;
-  }
-
-  .modal-body {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
-
-  .modal-body iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
   /* Addressing Fears */
   .addressing-fears {
     max-width: 1200px;
@@ -2044,20 +1809,19 @@ section {
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px;
+
   }
+
 
   .hero-content {
     max-width: 900px;
   }
 
   .hero-content h1 {
-    font-size: 6rem;
+    font-size: 5rem;
     /* line-height: 2; */
   }
 
-  .hero-content p.sub-text {
-    font-size: 3rem;
-  }
 
   .relationship-container {
     max-width: 1300px;
@@ -2150,7 +1914,6 @@ body {
   .btn,
   .hero-buttons,
   .blissfully-form,
-  .modal,
   .header-nav {
     display: none;
   }
