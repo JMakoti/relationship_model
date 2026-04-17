@@ -31,7 +31,7 @@
     <!-- Font Awesome - async load to prevent render blocking -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?display=swap"
       media="print"
       onload="
         this.media = 'all';
@@ -143,9 +143,6 @@
         background-color: var(--color-dark-brown);
         transform: translateY(-3px) scale(1.05);
         box-shadow: 0 5px 15px var(--color-tertiary);
-      }
-      .btn-join {
-        display: none;
       }
 
       section {
@@ -347,9 +344,9 @@
 
       /* Hero Section */
       .hero-header {
-        background:
+        /* background:
           var(--bs-gradient),
-          url("https://fx.iguanyalabs.com/images/relationship/hero_section_bg.webp");
+          url("https://fx.iguanyalabs.com/images/relationship/hero_section_bg.webp"); */
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
@@ -1009,7 +1006,7 @@
       .card,
       .design-card,
       .vision-card {
-        will-change: auto; /* Default, set to transform/opacity during active animations */
+        /* will-change: auto;  */
         backface-visibility: hidden;
         transform: translateZ(0);
       }
@@ -2000,6 +1997,36 @@
     </header>
 
     <section class="hero-header" id="home">
+      <picture>
+        <!-- <source
+          srcset="
+            https://fx.iguanyalabs.com/images/relationship/hero_section_bg.avif
+          "
+          type="image/avif"
+        /> -->
+        <source
+          srcset="
+            https://fx.iguanyalabs.com/images/relationship/hero_section_bg.webp
+          "
+          type="image/webp"
+        />
+        <img
+          src="https://fx.iguanyalabs.com/images/relationship/hero_section_bg.webp"
+          alt="Hero background"
+          fetchpriority="high"
+          width="1200"
+          height="800"
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+          "
+        />
+      </picture>
       <div class="hero-container">
         <div class="hero-content">
           <div class="hero-text">
@@ -2026,11 +2053,6 @@
         ></div>
 
         <div class="about-img">
-          <!-- <img
-            src="https://fx.iguanyalabs.com/images/about_img.jpeg"
-            loading="lazy"
-            alt="Steadiness"
-          /> -->
           <img
             src="https://fx.iguanyalabs.com/images/relationship/about_img.webp"
             alt="about_image"
